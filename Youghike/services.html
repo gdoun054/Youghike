@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Your Logo">
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service">
+          <img src="picture5.jpg" alt="Picture 5" class="img-fluid" data-bs-toggle="popover" data-bs-placement="top" data-bs-content=" Price: 250$  Procedures or therapies that improve hair health, condition, and appearance, addressing issues like dryness, damage, frizz, or lack of shine. Examples include deep conditioning, hair masks, and keratin treatments.">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service">
+          <img src="picture6.jpg" alt="Picture 6" class="img-fluid" data-bs-toggle="popover" data-bs-placement="top" data-bs-content=" Price: 300$   Indulge in our luxurious body treatment that will leave you feeling rejuvenated and pampered. Our skilled therapists will begin with a gentle exfoliation to remove dead skin cells, followed by a nourishing body mask infused with essential oils to deeply hydrate and nourish your skin. Finally, a relaxing massage using fragrant oils will release tension and promote overall well-being, leaving your body refreshed and glowing.">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service">
+          <img src="picture7.jpg" alt="Picture 7" class="img-fluid" data-bs-toggle="popover" data-bs-placement="top" data-bs-content=" Price 150$  Procedures to enhance facial skin health and appearance, targeting concerns like acne, aging, dullness, uneven tone, or dehydration. Treatments involve cleansing, exfoliation, masks, and skincare products to rejuvenate the skin and improve texture and clarity.">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+  <script>
+    const popovers = document.querySelectorAll('[data-bs-toggle="popover"]');
+    popovers.forEach((popover) => {
+      new bootstrap.Popover(popover);
+    });
+  </script>
+</body>
+</html>
+
+ 
+
+
+ 

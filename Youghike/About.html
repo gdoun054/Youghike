@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-section {
+      padding: 30px;
+      border-radius: 10px;
+      background-color: rgb(243, 255, 248);
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      .about-section {
+        padding: 15px;
+        font-size: 14px;
+      }
+    }
+
+    .balayage-effect {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(to right, rgba(243, 255, 248, 0) 0%, rgba(243, 255, 248, 1) 50%, rgba(243, 255, 248, 0) 100%);
+      animation: balayage-animation 5s linear infinite;
+    }
+
+    @keyframes balayage-animation {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    .dynamic-effect {
+      position: relative;
+      animation: move-animation 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes move-animation {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Your Logo">
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>About Us</h2>
+        <div class="about-section">
+          <div class="balayage-effect"></div>
+          <div class="alert alert-info" role="alert">
+            At Youghike, we specialize in creating stunning transformations. Our expert team offers top-notch treatments for hair, body, and face, tailored to enhance your natural beauty. Step into our sanctuary and experience a world of relaxation, rejuvenation, and renewed confidence. Our mission is to provide exceptional services that leave our clients feeling beautiful, confident, and empowered.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex align-items-center justify-content-center">
+        <img src="picture4.jpg" alt="Picture 4" class="img-fluid dynamic-effect">
+      </div>
+    </div>
+  </div>
+
+  <!-- Rest

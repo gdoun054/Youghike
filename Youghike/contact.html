@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #map {
+        height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Your Logo">
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div id="map" class="container"></div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/6.5.0/ol.js"></script>
+  <script>
+    function initMap() {
+        // Coordonnées de l'adresse
+        var adresse = ol.proj.fromLonLat([-75.682231, 45.422456]);
+
+        // Création de la carte
+        var carte = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: adresse,
+                zoom: 15
+            })
+        });
+
+        // Ajout du marqueur
+        var marqueur = new ol.Feature({
+            geometry: new ol.geom.Point(adresse)
+        });
+
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                anchor: [0.5, 1],
+                src: 'marker.png'
+            })
+        });
+
+        marqueur.setStyle(style);
+
+        var source = new ol.source.Vector({
+            features: [marqueur]
+        });
+
+        var layer = new ol.layer.Vector({
+            source: source
+        });
+
+        carte.addLayer(layer);
+    }
+  </script>
+  <script>
+    window.onload = initMap;
+  </script>
+</body>
+</html>
